@@ -47,7 +47,6 @@ const SearchBox = styled.form`
     font-size: 18px;
     border: none;
     outline: none;
-    text-align: center;
   }
   & button {
     padding: 10px;
