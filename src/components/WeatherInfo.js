@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import WeatherInfoComponent from "./WeatherInfoComponent";
 import { ImLocation2 } from "react-icons/im";
-import { BiArrowBack } from "react-icons/bi";
 
 const WeatherInfo = (props) => {
-  const { weather, setFound, selectedUnits, BackClick } = props;
+  const { weather, selectedUnits } = props;
   const [isFavourite, setIsFavourite] = useState(props.isFavourite);
 
   const favouriteIcon = () => {
@@ -33,14 +32,6 @@ const WeatherInfo = (props) => {
 
   return (
     <>
-      <Back
-        onClick={(e) => {
-          setFound(false);
-          BackClick();
-        }}
-      >
-        <BiArrowBack />
-      </Back>
       <WeatherCondition>
         <WeatherLogo
           src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`}
@@ -96,12 +87,6 @@ const WeatherCondition = styled.div`
   width: 100%;
   justify-content: space-between;
   margin: auto;
-`;
-const Back = styled.span`
-  color: #193c57;
-  font-size: 25px;
-  cursor: pointer;
-  margin-right: 90%;
 `;
 const Temperature = styled.div`
   margin: auto;

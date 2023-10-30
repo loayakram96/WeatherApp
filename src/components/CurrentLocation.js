@@ -1,11 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import axios from "axios";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import IconButton from "./IconButton";
 
 const API_KEY_openweathermap = "a8c9cb1945b07f6a34fb2a63893a661d";
 
 const CurrentLocation = ({ setCity, setFound, fetchWeather }) => {
-
   const onSuccess = async (location) => {
     try {
       const response = await axios.get(
@@ -34,23 +34,13 @@ const CurrentLocation = ({ setCity, setFound, fetchWeather }) => {
 
   return (
     <>
-      <Button onClick={() => fetchWeatherViaLocation()}>
-        Get Device Location
-      </Button>
+      <IconButton
+        title="Get Device Location"
+        icon={faLocationDot}
+        event={fetchWeatherViaLocation}
+      />
     </>
   );
 };
 
 export default CurrentLocation;
-
-const Button = styled.button`
-  padding: 11px;
-  font-size: 18px;
-  border-radius: 2px;
-  border: gray solid 2px;
-  outline: none;
-  color: white;
-  background-color: #43aefc;
-  cursor: pointer;
-  width: 320px;
-`;

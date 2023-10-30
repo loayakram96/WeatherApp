@@ -5,14 +5,6 @@ const Error = (props) => {
   const { setApierror, BackClick } = props;
   return (
     <Container>
-      <Back
-        onClick={() => {
-          setApierror(false);
-          BackClick();
-        }}
-      >
-        <BiArrowBack />
-      </Back>
       <Message>City not found! Please try again</Message>
     </Container>
   );

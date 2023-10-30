@@ -16,4 +16,8 @@ const WeatherUnits = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin: 12px auto;
+  padding-bottom: 12px;
+  font-size: 23px;
+  color: gray;
 `;

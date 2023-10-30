@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import IconButton from "./IconButton";
 
 const Favourites = ({ fetchWeather }) => {
   const [isFavouritesChosen, setIsFavouritesChosen] = useState(false);
   const [favouritesButtonText, setFavouritesButtonText] =
-    useState("Get Favourites");
+    useState("Show Favourites");
   const [favouritesList, setFavourites] = useState([]);
 
   useEffect(() => {
@@ -15,7 +17,7 @@ const Favourites = ({ fetchWeather }) => {
   const listFavourites = () => {
     if (isFavouritesChosen) {
       setIsFavouritesChosen(false);
-      setFavouritesButtonText("Get Favourites");
+      setFavouritesButtonText("Show Favourites");
     } else {
       setIsFavouritesChosen(true);
       setFavouritesButtonText("Hide Favourites");
@@ -28,15 +30,19 @@ const Favourites = ({ fetchWeather }) => {
 
   return (
     <>
-      <Button onClick={listFavourites}>{favouritesButtonText}</Button>
+      <IconButton
+        title={favouritesButtonText}
+        icon={faStar}
+        event={listFavourites}
+      />
       {isFavouritesChosen ? (
-        <div>
+        <FavouritesWrapper>
           {favouritesList.map((favourite) => (
             <FavouriteCity onClick={() => fetchCityWeather(favourite.name)}>
               {favourite.name}
             </FavouriteCity>
           ))}
-        </div>
+        </FavouritesWrapper>
       ) : null}
     </>
   );
@@ -44,22 +50,15 @@ const Favourites = ({ fetchWeather }) => {
 
 export default Favourites;
 
+const FavouritesWrapper = styled.div`
+  overflow: auto;
+  max-height: 4rem;
+  width: inherit;
+`;
+
 const FavouriteCity = styled.div`
   font-size: 18px;
   margin-top: 10px;
   text-align: center;
   cursor: pointer;
-`;
-
-const Button = styled.button`
-  padding: 11px;
-  font-size: 18px;
-  border-radius: 2px;
-  border: gray solid 2px;
-  outline: none;
-  color: white;
-  background-color: #43aefc;
-  cursor: pointer;
-  width: 320px;
-  margin-top: 10px;
 `;

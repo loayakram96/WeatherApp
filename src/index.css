@@ -1,7 +1,5 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 45rem;
-  background: #193c57;
+html, body {
+  margin: 0;
+  height:100vh;
+  background-image: linear-gradient(to right top, #16448a, #135498, #1463a6, #1973b3, #2283bf);
 }
