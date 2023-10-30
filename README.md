@@ -2,7 +2,7 @@
 
 Simple ReactJS weather application that shows weather information giving a specific city.
 
-![Screenshot 2023-10-30 at 15 05 26](https://github.com/loayakram96/weatherApp/assets/28843246/148ef4b4-d07a-4854-8ce0-4f3dac8e2110)
+![Turfcoach Weather App Demo](https://github.com/loayakram96/weatherApp/assets/28843246/57631790-b1ef-4dec-bf8e-195b1ff6889a)
 
 ## Run Locally
 
