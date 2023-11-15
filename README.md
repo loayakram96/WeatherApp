@@ -41,8 +41,3 @@ Start the server
 - CSS3
 - JavaScript (ES6+)
 - ReactJS
-
-
-> 5. Lazy Loading
-
-Included in ```App.js```
