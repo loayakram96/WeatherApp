@@ -42,27 +42,6 @@ Start the server
 - JavaScript (ES6+)
 - ReactJS
 
-## Needed Features Places
-
-Most of the logic would be included in the ```App.js``` as it's the entry component, along with helper components depends on the needed feature
-> 1. Implement a search feature that allows users to search for weather information in a
-specific city.
-
-The logic found in ```CityComponent.js```
-
-> 2. Display relevant weather information, including optional parameters such as precipitation
-and user-selected units.
-
-The logic found in ```WeatherInfo.js``` ```WeatherInfoComponent.js``` ```WeatherUnitWrapper.js``` ```WeatherUnit.js``` 
-
-> 3. Fetch and display an image of the queried city or location.
-
-Included in ```App.js``` already
-
-> 4. Allow users to add or delete cities to/from their favourites (no need for any
-backend/persistent storage of the favourites)
-
-Mainly in ```Favourites.js```
 
 > 5. Lazy Loading
 
